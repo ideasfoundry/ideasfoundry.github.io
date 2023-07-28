@@ -42,6 +42,13 @@ menu_items = [
 ]
 color_mode = "auto"
 
+# The taxonomies to be rendered for the site and their configuration of the default languages
+
+taxonomies = [
+{ name = "tags", feed = true, lang = "en" },
+{ name = "categories", feed = true, lang = "en" },
+]
+
 [translations]
 projects = "Projects"
 blog = "Blog"
