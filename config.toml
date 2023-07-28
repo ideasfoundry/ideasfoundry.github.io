@@ -68,9 +68,7 @@ images = "Images"
 
 # The taxonomies to be rendered for the site and their configuration of the default languages
 
-taxonomies = [
-{ name = "tags", feed = true, lang = "en" },
-]
+taxonomies = [{ name = "tags", feed = true, lang = "en" },]
 
 [extra.ogp]
 locale = "en_US"
