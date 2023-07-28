@@ -1,0 +1,81 @@
+# The URL the site will be built for
+
+base_url = "https://basicsecurity.in"
+
+# Whether to automatically compile all Sass files in the sass directory
+
+compile_sass = true
+default_language = "en"
+title = "Hemant Gautam"
+
+# Whether to build a search index to be used later on by a JavaScript library
+
+build_search_index = true
+theme = "papaya"
+[markdown]
+
+# Whether to do syntax highlighting
+
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+
+highlight_code = true
+
+# The theme to use for code highlighting.
+
+# See Zola configuration docs for list of allowed values.
+
+highlight_theme = "css"
+highlight_themes_css = [
+{ theme = "material-dark", filename = "syntax-theme-dark.css" },
+{ theme = "material-light", filename = "syntax-theme-light.css" },
+]
+
+[extra]
+
+# Put all your custom variables here
+
+menu_items = [
+{ name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
+{ name = "images", url = "$LANG_BASE_URL/images", show_recent = true, recent_items = 3, recent_trans_key = "recent_images", more_trans_key = "more_images" },
+{ name = "tags", url = "$LANG_BASE_URL/tags" },
+{ name = "about", url = "$LANG_BASE_URL/about" },
+]
+color_mode = "auto"
+
+[translations]
+projects = "Projects"
+blog = "Blog"
+images = "Images"
+about = "About"
+recent_images = "Recent Images"
+more_images = "More Images"
+recent_blog_posts = "Recent Blog Posts"
+more_blog_posts = "More blog posts"
+tag = "Tag"
+tags = "Tags"
+to_all_tags = "To all tags"
+category = "Category"
+categories = "Categories"
+to_all_categories = "To all categories"
+view_by = "View by"
+other = "Other"
+minute = "min"
+prev_page = "To newer posts"
+next_page = "To older posts"
+date_format = "%e %B %Y"
+
+[extra.ogp]
+locale = "en_US"
+first_name = "Hemant"
+last_name = "Gautam"
+
+[extra.social]
+email = "ideasfoundry@gmail.com"
+github = "ideasfoundry"
+linkedin = "ideasfoundry/"
+twitter = "ideasfoundry"
+
+# CDN links
+
+[extra.cdn]
+font_awesome = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
