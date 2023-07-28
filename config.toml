@@ -12,6 +12,10 @@ title = "Hemant Gautam"
 
 build_search_index = true
 theme = "papaya"
+
+taxonomies = [
+{ name = "tags", feed = true},
+]
 [markdown]
 
 # Whether to do syntax highlighting
@@ -65,10 +69,6 @@ prev_page = "To newer posts"
 next_page = "To older posts"
 date_format = "%e %B %Y"
 images = "Images"
-
-# The taxonomies to be rendered for the site and their configuration of the default languages
-
-taxonomies = [{ name = "tags", feed = true, lang = "en" },]
 
 [extra.ogp]
 locale = "en_US"
