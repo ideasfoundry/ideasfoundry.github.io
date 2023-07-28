@@ -42,13 +42,6 @@ menu_items = [
 ]
 color_mode = "auto"
 
-# The taxonomies to be rendered for the site and their configuration of the default languages
-
-taxonomies = [
-{ name = "tags", feed = true, lang = "en" },
-{ name = "categories", feed = true, lang = "en" },
-]
-
 [translations]
 projects = "Projects"
 blog = "Blog"
@@ -72,6 +65,12 @@ prev_page = "To newer posts"
 next_page = "To older posts"
 date_format = "%e %B %Y"
 images = "Images"
+
+# The taxonomies to be rendered for the site and their configuration of the default languages
+
+taxonomies = [
+{ name = "tags", feed = true, lang = "en" },
+]
 
 [extra.ogp]
 locale = "en_US"
