@@ -63,6 +63,7 @@ minute = "min"
 prev_page = "To newer posts"
 next_page = "To older posts"
 date_format = "%e %B %Y"
+images = "Images"
 
 [extra.ogp]
 locale = "en_US"
