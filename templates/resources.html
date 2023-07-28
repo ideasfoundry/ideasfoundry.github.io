@@ -1,30 +1,29 @@
 {% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
 
-{% block title %}{{ trans(key="resources", lang=lang) }} - {{ config.title }}{% endblock title %}
+{% block title %}{{ trans(key="blog", lang=lang) }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
 <main id="main" tabindex="-1">
-    {% set resources_categories = load_data(path="content/resources/categories." ~ lang ~ ".json", required=false) %}
-    {% if not resources_categories %}
-        {% set resources_categories = load_data(path="content/resources/categories.json") %}
-    {% endif %}
-
-    {% for category, tag in resources_categories %}
-        <h1>{{ category }}</h1>
-        {% for page in section.pages %}
-            {% if page.taxonomies.categories is containing(tag) %}
-                {{ page_macros::resources_listing(page=page) }}
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-
-    <h1>{{ trans(key="other", lang=lang) }}</h1>
-    {% for page in section.pages %}
-        {% if page.taxonomies.categories | length == 0 %}
-            {{ page_macros::resources_listing(page=page) }}
+    {% block heading %}
+    <p>
+        {% if section.relative_path is ending_with("." ~ lang ~ ".md") %}
+            {% set tags_url = "/" ~ lang ~ "/tags" %}
+        {% else %}
+            {% set tags_url = "/tags" %}
         {% endif %}
-    {% endfor %}
-
+        {{ trans(key="view_by", lang=lang) }}: <a href={{ tags_url }}>{{ trans(key="tags", lang=lang) }}</a>
+    </p>
+    {% endblock heading %}
+    {% if paginator.pages %}
+        {% for page in paginator.pages %}
+            {{ page_macros::page_listing(page=page) }}
+        {% endfor %}
+        {{ page_macros::page_pagination(paginator=paginator) }}
+    {% else %}
+        {% for page in section.pages %}
+            {{ page_macros::page_listing(page=page) }}
+        {% endfor %}
+    {% endif %}
 </main>
 {% endblock content %}
