@@ -36,7 +36,7 @@ highlight_themes_css = [
 
 menu_items = [
 { name = "blog", url = "$LANG_BASE_URL/blog", show_recent = true, recent_items = 3, recent_trans_key = "recent_blog_posts", more_trans_key = "more_blog_posts" },
-{ name = "images", url = "$LANG_BASE_URL/images", show_recent = true, recent_items = 3, recent_trans_key = "recent_images", more_trans_key = "more_images" },
+{ name = "resources", url = "$LANG_BASE_URL/resources", show_recent = true, recent_items = 3, recent_trans_key = "recent_resources", more_trans_key = "more_resources" },
 { name = "tags", url = "$LANG_BASE_URL/tags" },
 { name = "about", url = "$LANG_BASE_URL/about" },
 ]
